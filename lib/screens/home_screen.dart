@@ -6,13 +6,11 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(
-        0xFFF9FBF9,
-      ), // Background putih kehijauan soft
+      backgroundColor: const Color(0xFFF9FBF9), // Background putih kehijauan soft
       body: SafeArea(
         child: Stack(
           children: [
-            // Background Aksesoris (Efek Gradasi Bulat Soft di desain lo)
+            // Background Aksesoris
             Positioned(
               top: -50,
               right: -50,
@@ -53,9 +51,7 @@ class HomeScreen extends StatelessWidget {
                           const SizedBox(width: 15),
                           const CircleAvatar(
                             radius: 18,
-                            backgroundColor: Color(
-                              0xFFE57373,
-                            ), // Warna merah avatar
+                            backgroundColor: Color(0xFFE57373), // Warna merah avatar
                             child: Text(
                               'S',
                               style: TextStyle(color: Colors.white),
@@ -155,7 +151,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 4),
-                        Text(
+                        const Text(
                           "Lihat berbagai ide dan inspirasi.",
                           style: TextStyle(color: Colors.black26, fontSize: 14),
                         ),
@@ -167,26 +163,6 @@ class HomeScreen extends StatelessWidget {
             ),
           ],
         ),
-      ),
-
-      // Bottom Navigation Bar
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 0,
-        selectedItemColor: const Color(0xFF27AE60),
-        unselectedItemColor: Colors.grey,
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home_filled),
-            label: "Beranda",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.qr_code_scanner_rounded),
-            label: "Pindai",
-          ),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: "Eksplor"),
-        ],
       ),
     );
   }
